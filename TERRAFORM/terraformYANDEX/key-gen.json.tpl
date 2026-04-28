@@ -1,0 +1,1 @@
+yc iam key create --service-account-id ${id_SA} --output key-sa-k8s.json 
