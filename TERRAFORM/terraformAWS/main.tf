@@ -37,11 +37,9 @@ resource "aws_eks_node_group" "gpu_node_group" {
   # Spot instances (equivalent to preemptible in YC)
   capacity_type = "SPOT"
 
-  depends_on = [
-    aws_iam_role_policy_attachment.eks_worker_node_policy,
-    aws_iam_role_policy_attachment.eks_cni_policy,
-    aws_iam_role_policy_attachment.eks_registry_policy,
-  ]
+   depends_on = [
+     aws_iam_role_policy_attachment.eks_node_policies
+   ]
 }
 
 

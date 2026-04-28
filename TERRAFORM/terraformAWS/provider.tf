@@ -15,7 +15,6 @@ terraform {
 
 provider "aws" {
   region = var.region
-  # Для использования LocalStack раскомментируйте блок ниже и закомментируйте стандартный провайдер
   # access_key                  = "test"
   # secret_key                  = "test"
   # skip_credentials_validation = true
@@ -47,13 +46,3 @@ provider "aws" {
   #   sts            = "http://localhost:4566"
   # }
 }
-
-# resource "aws_instance" "myserver" {
-#   ami           = "ami-830c94e3"
-#   instance_type = "t2.micro"
-#   count         = 100
-
-#   tags = {
-#     Name = "Server${count.index + 1}",
-#   }
-# }
